@@ -5,7 +5,9 @@ import lombok.Getter;
 
 import java.time.LocalDate;
 
-public class User {
+@AllArgsConstructor
+@Getter
+public abstract class User {
     private int id;
     private String firstname;
     private String lastname;
