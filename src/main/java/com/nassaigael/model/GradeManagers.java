@@ -3,7 +3,7 @@ package com.nassaigael.model;
 import java.time.Instant;
 
 public class GradeManagers {
-    public double getExamGrade(Examen examen, Student student, Instant t){
+    public static double getExamGrade(Examen examen, Student student, Instant t){
         Course course = examen.getCourse();
         if (course == null) {
             return 0.0;
@@ -18,7 +18,7 @@ public class GradeManagers {
         return grade != null ? grade.getValueAt(t) : 0.0;
     }
 
-    public double getCourseGrade(Course course, Student student, Instant t){
+    public static double getCourseGrade(Course course, Student student, Instant t){
         double totalWeightedGrade = 0.0;
         double totalCoefficient = 0.0;
 

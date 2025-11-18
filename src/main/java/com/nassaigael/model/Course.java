@@ -19,11 +19,22 @@ public class Course {
     private Map<GradeKey, Grade> grades = new HashMap<>();
 
     public void addExam(Examen examen){
+        if (examens == null) {
+            examens = new ArrayList<>();
+        }
         examens.add(examen);
-        examen.setCourse(this);
+        if (examen != null) {
+            examen.setCourse(this);
+        }
     }
 
     public void addGrade(Grade grade){
-        GradeKey key = new GradeKey(grade.getStudent().getId(), grade.getExamen().getId());
+        if (grades == null) {
+            grades = new HashMap<>();
+        }
+        if (grade != null && grade.getStudent() != null && grade.getExamen() != null) {
+            GradeKey key = new GradeKey(grade.getStudent().getId(), grade.getExamen().getId());
+            grades.put(key, grade);
+        }
     }
 }
