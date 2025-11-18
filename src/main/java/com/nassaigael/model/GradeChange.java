@@ -1,9 +1,9 @@
 package com.nassaigael.model;
 
+import java.time.Instant;
+
 import lombok.AllArgsConstructor;
 import lombok.Getter;
-
-import java.time.Instant;
 
 @AllArgsConstructor
 @Getter

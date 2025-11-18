@@ -5,8 +5,8 @@ import lombok.Getter;
 
 import java.time.LocalDate;
 
-@AllArgsConstructor
 @Getter
+@AllArgsConstructor
 public abstract class User {
     private int id;
     private String firstname;
